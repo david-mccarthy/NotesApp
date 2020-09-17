@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes app </title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <div id="notebook_wrapper">
+        <h1>Simple note application</h1>
+        <div id="new_note">
+            <h2>New note</h2>
+            <div>
+                <input type="text" id="note_title" placeholder="Note title">
+                <textarea placeholder="Note text" id="note_text" name="Note text" rows="4" cols="50">
+
+                </textarea>
+                <br />
+                <label for="note_color" id="note_color_label">Select note color:</label>
+                <select id="note_color" name="colors">
+                    <option selected value="#ffffff">White</option>
+                    <option value="#33cc33" style="background-color:#33cc33;">Green</option>
+                    <option value="#ffff00" style="background-color:#ffff00;">Yellow</option>
+                    <option value="#0099ff" style="background-color:#0099ff;">Blue</option>
+                    <option value="#ff9900" style="background-color:#ff9900;">Orange</option>
+                </select>
+                <br />
+                <button id="create_note" title="Create note">Create note</button>
+                <script>
+                    document.querySelector("#create_note").onclick = () => {
+                        createNewNote(document.querySelector('#note_title'),
+                            document.querySelector('#note_text'),
+                            document.querySelector('#note_color'))
+                    }
+                </script>
+            </div>
+        </div>
+        <div id="notes">
+        </div>
+    </div>
+    <script>
+        var savedNoteBook = localStorage.getItem('notebook');
+
+        if (savedNoteBook) {
+            document.querySelector("#notes").innerHTML = savedNoteBook;
+        }
+
+    </script>
+</body>
+
+</html>

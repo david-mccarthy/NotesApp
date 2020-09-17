@@ -1,0 +1,134 @@
+body{
+    background-color: #595b5f;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+}
+
+h1, h2 {
+    color: #fff
+}
+
+#note_color_label{
+    color: #fff
+}
+
+#note_color option:hover {
+    text-decoration:none;
+}
+
+#notebook_wrapper {
+    background-color: #282c34;
+    height: 90vh;
+    width:50vw;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7e8592;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0 10px 10px
+}
+
+#notes {
+    height: 60vh;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+.note{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7e8592;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0 10px 10px
+}
+
+.create_modify_times span{
+    display:block;
+    font-size:10px;
+}
+
+.cancel-button{
+    background-color: #c74444;
+    border: 1px solid #ab1818
+}
+
+.save-button{
+    background-color: #44c767;
+    border: 1px solid #18ab29
+}
+
+.edit-button{
+    background-color: #44c767;
+    border: 1px solid #18ab29
+}
+
+.delete-button{
+    background-color: #c74444;
+    border: 1px solid #ab1818
+}
+
+.button {
+    border-radius: 28px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px 16px 31px;
+    text-decoration: none;
+    
+    border: 2px solid #7e8592;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 10px 10px
+}
+
+notebook-note textarea, input {
+    width: 100%;
+    margin-top:.5em;
+}
+notebook-note textarea{
+    height: 120px;
+}
+#new_note {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7e8592;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0 10px 10px
+}
+
+#new_note #note_title{
+    display: block;
+    width:100%;
+}
+
+#new_note #note_text{
+    display: block;
+    width:100%;
+}
+
+#color_selector {
+    height: 20%;
+    width: 20%;
+    background-color: black;;
+}
+.color_selector_option {
+    height: 5px;
+    width: 5px;
+    background-color: white;
+}
+
